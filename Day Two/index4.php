@@ -5,6 +5,7 @@ $password=$_GET['password'];
 $gender=$_GET['gender'];
 $city=$_GET['city'];
 echo $username.$password.$gender.$city;
+echo "Hello";
 }
 ?>
 <!DOCTYPE html>
