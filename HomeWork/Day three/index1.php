@@ -1,7 +1,12 @@
 <?php
-$name=$_GET('name');
-$pass=$_GET('password')
-$gender=$_GET('gender')
+
+if(isset($_GET['username'])){
+    $username=$_GET['username'];
+    $password=$_GET['password'];
+    $gender=$_GET['gender'];
+    $city=$_GET['city'];
+    echo $username.$password.$gender.$city;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,19 +20,19 @@ $gender=$_GET('gender')
 <body>
     <form action="" method="GET">
         <div>
-            <label for="name" id='name'>Username</label>
-            <input type="text" name='name'>
+            <label for=''>Username</label>
+            <input type="text" name='username'>
         </div>
         <div>
-            <label for="pass">password</label>
+            <label for="">password</label>
             <input type="password" name='password'>
         </div>
         <div><label for="gender">Gender</label>
-            <div><label for="" name='gender' value='female'>Male</label>
-                <input type="radio">
+            <div><label for="">Male</label>
+                <input type="radio" name='gender' value='male'>
             </div>
             <div><label for="">Female</label>
-                <input type="radio" name='female'>
+                <input type="radio" name='gender' value='female'>
             </div>
         </div>
         <div><select name="city" id="">
@@ -35,6 +40,7 @@ $gender=$_GET('gender')
                 <option value="Mandalay">Mandalay</option>
                 <option value="Naypyitaw">Naypyitaw</option>
             </select></div>
+        <input type="submit">
     </form>
 </body>
 
